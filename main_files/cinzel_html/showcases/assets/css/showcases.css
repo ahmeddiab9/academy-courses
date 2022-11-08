@@ -362,13 +362,13 @@
   overflow: hidden;
 }
 .showcase-columns-h .swiper-slide .bg-img:hover{
-  transform :translateY( -10px);
+  transform :translateY(-5vh);
   transition: .5s ease-in-out;
+  height: 55vh;
 }
 .swiper-slide .text-details{
-  border-top: 3px solid #f00;
-  background-color: #0a2ecaed;
   padding: 10px;
+  border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
 }
 .swiper-slide .text-details h2 ,.swiper-slide .text-details h3{
   font-size: 14px;
