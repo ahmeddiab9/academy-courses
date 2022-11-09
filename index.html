@@ -32,7 +32,35 @@
 
 </head>
 <style>
-   
+    .header-content {
+        margin-top: 80px;
+    }
+
+    .header-content h2 {
+        width: 20%;
+        font-size: 40px;
+        line-height: 1;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    .header-content h2 span{
+        color : #2843f7 !important
+    }
+    .text-details{
+        background-color: #2843f7;
+    }
+    @media (min-width: 1200px) { 
+        .header-content {
+            margin-top: 120px;
+        }
+        .header-content h2 {
+            width: 25%;
+            font-size: 60px;
+            line-height: 1;
+            font-weight: bold;
+            text-transform: uppercase;
+    }
+     }
 
     .logo {
         position: relative;
@@ -154,12 +182,21 @@
         height: 1px;
         background: #fff;
     }
-    body.light .line-text a::after{
+
+    body.light .line-text a::after {
         background: #000;
     }
 
     .line-text a span {
         transform: rotate(180deg);
+    }
+    .showcase-columns-h .swiper-wrapper a .text-details h2 , 
+    .showcase-columns-h .swiper-wrapper a .text-details h3{
+        text-transform: uppercase;
+        font-size: 18px;
+    }
+    a[data-tooltip-sub = "HOW TO BUILD A STRONG BRAND"]{
+        background-color: #f00 !important;
     }
 </style>
 
@@ -221,13 +258,12 @@
                                 Courses
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="pg-our-team.html">How To create From Scratch</a></li>
-                                <li><a class="dropdown-item" href="portfolio-layout-hover-effect.html">Hover Effect</a>
+                                <li><a class="dropdown-item" href="pg-our-team.html">HOW TO CREATE MOCKUPS FROM SCRATCH</a></li>
+                                <li><a class="dropdown-item" href="pg-our-team.html">SECRETS OF REALASTICS COMPOSITES</a>
                                 </li>
-                                <li><a class="dropdown-item" href="portfolio-layout-metro.html">Layout Metro</a></li>
-                                <li><a class="dropdown-item" href="portfolio-layout-packery.html">Layout Packery</a>
+                                <li><a class="dropdown-item" href="pg-our-team.html">HOW TO BUILD A STRONG BRAND</a></li>
+                                <li><a class="dropdown-item" href="pg-our-team.html">3D ART DIRECTIONS GUIDES </a>
                                 </li>
-                                <li><a class="dropdown-item" href="project-details.html">Project Details</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
@@ -252,8 +288,8 @@
                             <ul class="rest">
                                 <li>
                                     <a href="#0"><i class="fab fa-facebook-f"></i></a>
-                                    <a href="#0"><i class="fab fa-twitter"></i></a>
-                                    <a href="#0"><i class="fab fa-dribbble"></i></a>
+                                    <a href="#0"><i class="fab fa-instagram"></i></a>
+                                    <a href="#0"><i class="fab fa-behance"></i></a>
                                 </li>
                             </ul>
                         </div>
@@ -282,16 +318,22 @@
 
             <div class="vline"></div>
 
+
+
+
             <!-- ==================== Start Slider ==================== -->
 
-            <header class="slider showcase-columns-h" data-carousel="swiper" data-items="4" data-loop="true"
-                data-space="30" data-speed="1000" data-mousewheel="true">
+            <header class="slider showcase-columns-h" data-carousel="swiper" data-items="4" data-loop="false"
+                data-space="0" data-speed="1000" data-mousewheel="true">
                 <div id="content-carousel-container-unq-1" class="swiper-container" data-swiper="container">
+                    <div class="header-content">
+                        <h2>Our <span>Experts</span></h2>
+                    </div>
                     <div class="swiper-wrapper">
 
                         <a href="project-details.html" class="swiper-slide image">
                             <div class="bg-img image__img" data-background="showcases/assets/img/columns/1.jpg"
-                                data-tooltip-tit="Illustration" data-tooltip-sub="Web Design">
+                                data-tooltip-tit="ROUND1" data-tooltip-sub="HOW TO CREATE MOCKUPS FROM SCRATCH">
                             </div>
                             <div class="image__overlay image__overlay--primary">
                                 <div class="image__title">Bricks</div>
@@ -300,56 +342,41 @@
                                 </p>
                             </div>
                             <div class="text-details">
-                                <h2>Ahmed</h3>
-                                    <h3>Mohamed</h3>
+                                <h2>Ahmed Tarek</h3>
+                                    <h3>Graphic Designer</h3>
                             </div>
                         </a>
                         <a href="project-details.html" class="swiper-slide">
                             <div class="bg-img" data-background="showcases/assets/img/columns/2.jpg"
-                                data-tooltip-tit="Illustration" data-tooltip-sub="Graphic"></div>
+                                data-tooltip-tit="ROUND1" data-tooltip-sub="HOW TO BUILD A STRONG BRAND"></div>
                             <div class="text-details">
-                                <h2>Ahmed</h3>
-                                    <h3>Mohamed</h3>
+                                <h2>Omnia Alaa</h3>
+                                    <h3>Art Director</h3>
                             </div>
                         </a>
                         <a href="project-details.html" class="swiper-slide">
                             <div class="bg-img" data-background="showcases/assets/img/columns/3.jpg"
-                                data-tooltip-tit="Illustration" data-tooltip-sub="Photography"></div>
+                                data-tooltip-tit="ROUND3" data-tooltip-sub="SECRETS OF REALASTICS COMPOSITES"></div>
                             <div class="text-details">
-                                <h2>Ahmed</h3>
-                                    <h3>Mohamed</h3>
+                                <h2>Badr</h3>
+                                    <h3>Diab</h3>
                             </div>
                         </a>
                         <a href="project-details.html" class="swiper-slide">
                             <div class="bg-img" data-background="showcases/assets/img/columns/4.jpg"
-                                data-tooltip-tit="Illustration" data-tooltip-sub="Web Design"></div>
+                                data-tooltip-tit="Illustration" data-tooltip-sub="3D ART DIRECTIONS GUIDES"></div>
                             <div class="text-details">
-                                <h2>Ahmed</h3>
-                                    <h3>Mohamed</h3>
+                                <h2>Ahmed Hassan</h3>
+                                    <h3>Art Director</h3>
                             </div>
                         </a>
-                        <a href="project-details.html" class="swiper-slide">
-                            <div class="bg-img" data-background="showcases/assets/img/columns/5.jpg"
-                                data-tooltip-tit="Illustration" data-tooltip-sub="Web Design"></div>
-                            <div class="text-details">
-                                <h2>Ahmed</h3>
-                                    <h3>Mohamed</h3>
-                            </div>
-                        </a>
-                        <a href="project-details.html" class="swiper-slide">
-                            <div class="bg-img" data-background="showcases/assets/img/columns/6.jpg"
-                                data-tooltip-tit="Illustration" data-tooltip-sub="Branding"></div>
-                            <div class="text-details">
-                                <h2>Ahmed</h3>
-                                    <h3>Mohamed</h3>
-                            </div>
-                        </a>
+                        
                     </div>
 
                 </div>
 
                 <!-- slider setting -->
-                <div class="txt-botm">
+                <!-- <div class="txt-botm">
                     <div id="next" class="swiper-button-next swiper-nav-ctrl cursor-pointer">
                         <div>
                             <span class=" custom-font">Next Slide</span>
@@ -362,7 +389,7 @@
                             <span class=" custom-font">Prev Slide</span>
                         </div>
                     </div>
-                </div>
+                </div> -->
 
             </header>
 

@@ -22,6 +22,8 @@
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
 
     <!-- Plugins -->
     <link rel="stylesheet" href="assets/css/plugins.css" />
@@ -30,8 +32,303 @@
     <link rel="stylesheet" href="assets/css/style.css" />
 
 </head>
+<style>
+    .Instructor-details {
+        margin-top: 200px;
+    }
+
+    .description {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .img-instructor {
+        width: 50%;
+    }
+
+    .img-instructor h2 {
+        line-height: 0;
+        margin-top: 30px;
+        text-transform: uppercase;
+    }
+
+    .img-instructor p {
+        margin-top: 15px;
+        text-transform: uppercase;
+    }
+
+    .description-instructor {
+        width: 50%;
+        position: relative;
+    }
+
+    .description-instructor::before {
+        position: absolute;
+        top: -24px;
+        left: -66px;
+        content: "";
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        background: conic-gradient(#6437f0, #19bdf9, #fcb114, #3379fa, #e34184);
+    }
+
+    .description-instructor h2 {
+        position: relative;
+    }
+
+    .description-instructor .subscribe {
+        margin-top: 5px;
+        margin-bottom: 5px;
+        margin-right: 60px;
+        border: none;
+        padding: 8px;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+    }
+
+    .subscribe {
+        position: relative;
+    }
+
+    .subscribe::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 202px;
+        height: 5px;
+    }
+
+    .full-description {
+        margin-top: 100px;
+        padding: 20px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+    }
+
+    .logo {
+        position: relative;
+    }
+
+    .logo p.main-text {
+        color: #fff;
+        font-size: 24px;
+        line-height: 0;
+        margin-bottom: 4px;
+        font-weight: 700;
+    }
+
+    .logo p.sec-text {
+        margin-left: 10px;
+    }
+
+    .logo p span {
+        position: absolute;
+        right: 10px;
+        top: -5px;
+        font-size: 12px;
+    }
+
+    .testimonials .journey {
+        color: #2843f7 !important;
+    }
+
+
+    .line-text {
+        position: absolute;
+        top: 20%;
+        left: 3em;
+        transform: rotate(90deg);
+        transform-origin: 0 0;
+        z-index: 99;
+    }
+
+    .line-text a {
+        font-weight: 300;
+        font-size: 1rem;
+    }
+
+    .line-text a::after {
+        content: '';
+        display: inline-block;
+        width: 17rem;
+        margin-left: 13px;
+        margin-bottom: 3px;
+        height: 1px;
+        background: white;
+    }
+
+    body.light .line-text a::after {
+        background: #000;
+    }
+
+    .line-text a span {
+        transform: rotate(180deg);
+    }
+
+    .img-instructor img {
+        width: 80%;
+        height: 100%;
+        max-height: 385px;
+    }
+
+    .price-list {
+        width: 30%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .discount p {
+        position: relative;
+    }
+
+    .price-list .main p {
+        color: #fff !important;
+        font-weight: bold;
+    }
+
+    .discount p::after {
+        position: absolute;
+        content: '';
+        left: 19px;
+        top: -19px;
+        background-color: #919191;
+        width: 1px;
+        height: 62px;
+        transform: rotate(104deg);
+    }
+
+    .sec-head h2 span {
+        color: #2843f7 !important
+    }
+
+    .sec-head h2 {
+        font-size: 36px;
+    font-weight: 800;
+    font-family: sans-serif;
+    }
+
+    .rounded {
+        border-radius: 1rem
+    }
+
+    .nav-pills .nav-link {
+        color: #555
+    }
+
+    .nav-pills .nav-link.active  , .nav-pills .nav-link.active p{
+        color: white !important
+    }
+
+    input[type="radio"] {
+        margin-right: 5px
+    }
+
+    .bold {
+        font-weight: bold
+    }
+
+    .payment-full {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .payment-full .card {
+        color: #000;
+    }
+
+    .form-payment {
+        width: 58%;
+    }
+    .check-payment p{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .flex-title-payment {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .flex-title-payment p {
+        color: #000 !important;
+    }
+    .buttons-coupon{
+        margin-top: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .buttons-coupon a{
+        border: 1px solid #000;
+        display: flex;
+        justify-content: space-between;
+        padding: 18px;
+    }
+    .buttons-coupon a p{
+        color: #000;
+    }
+    .card-footer .ques-copun{
+        display: flex;
+        justify-content: space-between;
+    }
+    .code input{
+        color: #000;
+        padding: 20px;
+        margin-top: 5px;
+        margin-top: 26px;
+    }
+    .ques-copun p{
+        color: #000;
+        font-size: 13px;
+    }
+    .card-footer{
+        background-color: #fff;
+    }
+    .check-payment{
+        background-color: #fff;
+        padding: 16px;
+        color: #000; 
+        width: 38%   
+    }
+    .check-payment span{
+        color: #555;
+    }
+    .subscribe-date{
+        display: flex;
+    justify-content: space-between;
+    padding: 6px 5px;
+    background-color: #ccc;
+    border-radius: 5px;
+    }
+    .tilte-sub{
+        font-weight: bold;
+        color: #000;
+    }
+    .list-category{
+        color: #000;
+        font-weight: 400;
+    }
+    .list-category span{
+        color: #555 !important;
+    }
+    .det-course p{
+        color: #555 !important;
+    }
+
+    
+</style>
 
 <body>
+    <div class="parent-line">
+        <div class="line-text">
+            <a href="#">
+                <span>MORE EMOTIONS</span>
+            </a>
+        </div>
+    </div>
 
 
     <!-- ==================== Start progress-scroll-button ==================== -->
@@ -58,144 +355,59 @@
     <!-- ==================== Start Navbar ==================== -->
 
     <nav class="navbar navbar-expand-lg nochan">
-        <div class="container-xxl">
+        <div class="container">
             <a class="navbar-brand" href="#0">
                 <div class="logo">
                     <div class="logo-light">
-                        <img src="assets/img/logo-light.png" alt="">
+                        <p class="main-text">CREATO<span>TM</span></p>
+                        <p class="sec-text">ACADEMY</p>
                     </div>
                     <div class="logo-dark">
-                        <img src="assets/img/logo-dark.png" alt="">
+                        <p class="main-text">CREATO<span>TM</span></p>
+                        <p class="sec-text">ACADEMY</p>
                     </div>
                 </div>
             </a>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
                             Home
                         </a>
-                        <ul class="dropdown-menu">
-                            <li class="dropdown-item">
-                                <a href="#0">Showcase <i class="fas fa-angle-right icon-arrow"></i></a>
-                                <ul class="dropdown-side">
-                                    <li><a class="dropdown-item" href="showcase-full.html">Fullscreen Slider</a></li>
-                                    <li><a class="dropdown-item" href="showcase-interactive-center.html">Interactive Links</a></li>
-                                    <li><a class="dropdown-item" href="showcase-interactive-center-horizontal.html">Interactive Links 2</a></li>
-                                    <li><a class="dropdown-item" href="showcase-parallax.html">Parallax Slider</a></li>
-                                    <li><a class="dropdown-item" href="index.html">Columns Horizontal</a></li>
-                                </ul>
-                            </li>
-                            <li><a class="dropdown-item" href="home-main.html">Home Main</a></li>
-                            <li><a class="dropdown-item" href="home-creative.html">Creative Studio</a></li>
-                            <li><a class="dropdown-item" href="home-modern.html">Modern Agency</a></li>
-                            <li><a class="dropdown-item" href="home-business.html">Business Corporate</a></li>
-                            <li><a class="dropdown-item" href="home-arch.html">Architecture</a></li>
-                            <li><a class="dropdown-item" href="home-freelancer.html">Freelancer</a></li>
-                            <li><a class="dropdown-item" href="home-agency.html">Digital Agency</a></li>
-                            <li><a class="dropdown-item" href="home-fullpage-scroll.html">One Page Scrolling</a></li>
-                            <li><a class="dropdown-item" href="home-portfolio-grid.html">Creative Agency</a></li>
-                            <li><a class="dropdown-item" href="home-portfolio-minimal.html">Minimal Portfolio</a></li>
-                        </ul>
                     </li>
 
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="pg-about-us.html">
+                            About us
+                        </a>
+                    </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
-                            Pages
+                            Courses
                         </a>
                         <ul class="dropdown-menu">
-                            <li class="dropdown-item">
-                                <a href="#0">About <i class="fas fa-angle-right icon-arrow"></i></a>
-                                <ul class="dropdown-side">
-                                    <li><a class="dropdown-item" href="pg-about-us.html">About Us 1</a></li>
-                                    <li><a class="dropdown-item" href="pg-about-us2.html">About Us 2</a></li>
-                                </ul>
+                            <li><a class="dropdown-item" href="pg-our-team.html">HOW TO CREATE MOCKUPS FROM SCRATCH</a></li>
+                            <li><a class="dropdown-item" href="pg-our-team.html">SECRETS OF REALASTICS COMPOSITES</a>
                             </li>
-                            <li class="dropdown-item">
-                                <a href="#0">Services <i class="fas fa-angle-right icon-arrow"></i></a>
-                                <ul class="dropdown-side">
-                                    <li><a class="dropdown-item" href="pg-services.html">Services 1</a>
-                                    </li>
-                                    <li><a class="dropdown-item" href="pg-services2.html">Services 2</a>
-                                    </li>
-                                </ul>
+                            <li><a class="dropdown-item" href="pg-our-team.html">HOW TO BUILD A STRONG BRAND</a></li>
+                            <li><a class="dropdown-item" href="pg-our-team.html">3D ART DIRECTIONS GUIDES </a>
                             </li>
-                            <li><a class="dropdown-item" href="pg-our-team.html">Our Team</a></li>
-                            <li><a class="dropdown-item" href="pg-contact.html">Get In Touch</a></li>
-                            <li><a class="dropdown-item" href="pg-mission.html">Our Mission</a></li>
-                            <li><a class="dropdown-item" href="404.html">Error 404</a></li>
-                            <li><a class="dropdown-item" href="coming-soon.html">Coming Soon</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
-                            Portfolio
+                            Services
                         </a>
-                        <ul class="dropdown-menu">
-                            <li class="dropdown-item">
-                                <a href="#0">Grid <i class="fas fa-angle-right icon-arrow"></i></a>
-                                <ul class="dropdown-side">
-                                    <li><a class="dropdown-item" href="portfolio-grid-2col.html">Grid 2 Columns</a></li>
-                                    <li><a class="dropdown-item" href="portfolio-grid-3col.html">Grid 3 Columns</a></li>
-                                    <li><a class="dropdown-item" href="portfolio-grid-4col.html">Grid 4 Columns</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown-item">
-                                <a href="#0">Masonry <i class="fas fa-angle-right icon-arrow"></i></a>
-                                <ul class="dropdown-side">
-                                    <li><a class="dropdown-item" href="portfolio-masonry-classic.html">Masonry
-                                            Classic</a></li>
-                                    <li><a class="dropdown-item" href="portfolio-masonry-shadow.html">Masonry Shadow</a>
-                                    </li>
-                                    <li><a class="dropdown-item" href="portfolio-masonry-overlay.html">Masonry
-                                            Overlay</a></li>
-                                    <li><a class="dropdown-item" href="portfolio-masonry-big-space.html">Masonry Wide
-                                            Space</a></li>
-                                    <li><a class="dropdown-item" href="portfolio-masonry-caption-cursor.html">Masonry
-                                            Cursor Caption</a></li>
-                                </ul>
-                            </li>
-                            <li><a class="dropdown-item" href="portfolio-layout-hover-effect.html">Hover Effect</a></li>
-                            <li><a class="dropdown-item" href="portfolio-layout-metro.html">Layout Metro</a></li>
-                            <li><a class="dropdown-item" href="portfolio-layout-packery.html">Layout Packery</a></li>
-                            <li><a class="dropdown-item" href="project-details.html">Project Details</a></li>
-                        </ul>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Blogs
+                    <li class="nav-item">
+                        <a class="nav-link" href="home-agency.html">
+                            Student Work
                         </a>
-                        <ul class="dropdown-menu show-left">
-                            <li class="dropdown-item">
-                                <a href="#0">Blog Grid <i class="fas fa-angle-right icon-arrow"></i></a>
-                                <ul class="dropdown-side">
-                                    <li><a class="dropdown-item" href="blog-grid-2col.html">Grid 2 Columns + Sidebar</a>
-                                    </li>
-                                    <li><a class="dropdown-item" href="blog-grid-3col.html">Grid 3 Columns</a></li>
-                                    <li><a class="dropdown-item" href="blog-grid-4col.html">Grid 4 Columns</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown-item">
-                                <a href="#0">Blog Masonry <i class="fas fa-angle-right icon-arrow"></i></a>
-                                <ul class="dropdown-side">
-                                    <li><a class="dropdown-item" href="blog-masonry-2col.html">Masonry 2 Columns +
-                                            Sidebar</a>
-                                    </li>
-                                    <li><a class="dropdown-item" href="blog-masonry-3col.html">Masonry 3 Columns</a>
-                                    </li>
-                                    <li><a class="dropdown-item" href="blog-masonry-4col.html">Masonry 4 Columns</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li><a class="dropdown-item" href="blog-classic.html">Blog Calssic</a></li>
-                            <li><a class="dropdown-item" href="blog-list.html">Blog List</a></li>
-                            <li><a class="dropdown-item" href="blog-post.html">Post Details</a></li>
-                        </ul>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="pg-contact2.html">
@@ -208,651 +420,254 @@
                         <ul class="rest">
                             <li>
                                 <a href="#0"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#0"><i class="fab fa-twitter"></i></a>
-                                <a href="#0"><i class="fab fa-dribbble"></i></a>
+                                <a href="#0"><i class="fab fa-instagram"></i></a>
+                                <a href="#0"><i class="fab fa-behance"></i></a>
                             </li>
                         </ul>
                     </div>
                     <div class="dark-mode-icon">
                         <button type="button" class="theme-icon">
-                            <i aria-hidden="true" class="pe-7s-moon moon" title="Toggle between dark and light mode"></i>
-                            <i aria-hidden="true" class="pe-7s-sun sun" title="Toggle between dark and light mode"></i>
+                            <i aria-hidden="true" class="pe-7s-moon moon"
+                                title="Toggle between dark and light mode"></i>
+                            <i aria-hidden="true" class="pe-7s-sun sun"
+                                title="Toggle between dark and light mode"></i>
                         </button>
                     </div>
                 </div>
             </div>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
     </nav>
-
     <!-- ==================== End Navbar ==================== -->
 
 
     <main>
 
         <div class="vline tline"></div>
-
-
-        <!-- ==================== Start Slider ==================== -->
-
-        <header class="pg-header">
-            <div class="container-xxl">
-                <div class="row">
-                    <div class="col-lg-7 col-md-10">
-                        <div class="cont mb-80">
-                            <h6 class="sub-title main-color">Services</h6>
-                            <h3 class="fw-700">We Give You Digital Solutions a full-service creative agency.</h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="background bg-img parallaxie" data-background="assets/img/slider/d1.jpg" data-overlay-dark="4">
-                <div class="under">
-                    <h4 class="stroke fw-800">Services</h4>
-                </div>
-                <div class="up">
-                    <h4 class="stroke fw-800">Services</h4>
-                </div>
-                <div class="bg-img dots-bg" data-background="assets/img/dots-glitch.png"></div>
-            </div>
-        </header>
-
-        <!-- ==================== End Slider ==================== -->
-
-
-
-        <!-- ==================== Start Services ==================== -->
-
-        <section class="section-padding pb-80 bg-dark">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="cont mb-50">
-                            <h6 class="sub-title main-color">Our Services.</h6>
-                            <h4 class="wow fw-700">Creativity is the process of having original ideas.</h4>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="item mb-50 bord-thin-bottom pb-40">
-                            <span class="icon mb-15">01</span>
-                            <h6 class="mb-20"><span class="mr-10">/</span> SEO Analytics</h6>
-                            <p>We build and activate brands through cultural insight, strategic vision, and the
-                                power of emotion across every.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="item mb-50 bord-thin-bottom pb-40">
-                            <span class="icon mb-15">02</span>
-                            <h6 class="mb-20"><span class="mr-10">/</span> Product Design</h6>
-                            <p>We build and activate brands through cultural insight, strategic vision, and the
-                                power of emotion across every.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="item mb-50 bord-thin-bottom pb-40">
-                            <span class="icon mb-15">03</span>
-                            <h6 class="mb-20"><span class="mr-10">/</span> SEO Analytics</h6>
-                            <p>We build and activate brands through cultural insight, strategic vision, and the
-                                power of emotion across every.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="item bord-thin-bottom pb-40">
-                            <span class="icon mb-15">04</span>
-                            <h6 class="mb-20"><span class="mr-10">/</span> Web Development</h6>
-                            <p>We build and activate brands through cultural insight, strategic vision, and the
-                                power of emotion across every.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="item bord-thin-bottom pb-40">
-                            <span class="icon mb-15">05</span>
-                            <h6 class="mb-20"><span class="mr-10">/</span> Branding Strategy</h6>
-                            <p>We build and activate brands through cultural insight, strategic vision, and the
-                                power of emotion across every.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ==================== End Services ==================== -->
-
-
-
-        <!-- ==================== Start intro ==================== -->
-
-        <section class="intro-box section-padding sub-bg">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="main-marq section-padding pt-0">
-                            <div class="slide-har st1">
-
-                                <div class="box">
-                                    <div class="item">
-                                        <h4>UI/UX Experience</h4>
-                                    </div>
-                                    <div class="item">
-                                        <h4>Web Development</h4>
-                                    </div>
-                                    <div class="item">
-                                        <h4>Digital Marketing</h4>
-                                    </div>
-                                    <div class="item">
-                                        <h4>Product Design</h4>
-                                    </div>
-                                    <div class="item">
-                                        <h4>Mobile Solutions</h4>
-                                    </div>
-                                </div>
-                                <div class="box">
-                                    <div class="item">
-                                        <h4>UI/UX Experience</h4>
-                                    </div>
-                                    <div class="item">
-                                        <h4>Web Development</h4>
-                                    </div>
-                                    <div class="item">
-                                        <h4>Digital Marketing</h4>
-                                    </div>
-                                    <div class="item">
-                                        <h4>Product Design</h4>
-                                    </div>
-                                    <div class="item">
-                                        <h4>Mobile Solutions</h4>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container-xxl ontop mb-100">
-                <div class="row">
-                    <div class="col-lg-5">
-                        <div class="img md-mb50">
-                            <img src="assets/img/intro/1.jpg" alt="">
-                            <div class="vid-show bg-blur md-hide">
-                                <div class="rotate-circle fz-30 text-u">
-                                    <svg class="textcircle" viewBox="0 0 500 500">
-                                        <defs>
-                                            <path id="textcircle"
-                                                d="M250,400 a150,150 0 0,1 0,-300a150,150 0 0,1 0,300Z">
-                                            </path>
-                                        </defs>
-                                        <text>
-                                            <textPath xlink:href="#textcircle" textLength="900">Play Video - Play
-                                                Video -
-                                                Play Video -</textPath>
-                                        </text>
-                                    </svg>
-                                </div>
-                                <div class="play-button fz-40">
-                                    <a href="https://youtu.be/AzwC6umvd1s" class="vid">
-                                        <i class="pe-7s-play main-color"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 offset-lg-1 valign">
-                        <div class="cont">
-                            <div class="flex mb-50">
-                                <div>
-                                    <h4 class="fz-70 fw-400 line-height-1">100+</h4>
-                                </div>
-                                <div class="text ml-30">
-                                    <h6 class="mb-15">Projects Complete</h6>
-                                    <p>Natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="flex">
-                                <div>
-                                    <h4 class="fz-70 fw-400 line-height-1">2180</h4>
-                                </div>
-                                <div class="text ml-30">
-                                    <h6 class="mb-15">Creative Ideas</h6>
-                                    <p>Natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="bg-pattern2 opacity-1 bg-img" data-background="assets/img/pattern4.png"></div>
-        </section>
-
-        <!-- ==================== End intro ==================== -->
-
-
-
-        <!-- ==================== Start services box ==================== -->
-
-        <section class="serv-bg-box toup-100">
-            <div class="container-xxl">
-                <div class="row">
-                    <div class="col-lg-4 col-md-6 item current d-flex align-items-end" data-tab="tab-1">
-                        <div class="cont">
-                            <h5 class="fw-700">Brand Strategy & Art Direction</h5>
-                            <p>Creating a higher spacing and how people move through a unique and impactful campaign.
-                            </p>
-                            <span class="more main-color mt-30">
-                                <a href="pg-mission.html">Read More</a>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 item d-flex align-items-end" data-tab="tab-2">
-                        <div class="cont">
-                            <h5 class="fw-700">UX/UI Design & Website/App Design</h5>
-                            <p>Get a regulatory oneven an enterprises such she and the got the did attributing and pushed.
-                            </p>
-                            <span class="more main-color mt-30">
-                                <a href="pg-mission.html">Read More</a>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 item d-flex align-items-end" data-tab="tab-3">
-                        <div class="cont">
-                            <h5 class="fw-700">Typography & Video Production</h5>
-                            <p>Spaces of each debt in the digital world can help you with overall simplest authentic.
-                            </p>
-                            <span class="more main-color mt-30">
-                                <a href="pg-mission.html">Read More</a>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="col-12 chan-img" data-overlay-dark="5">
-                        <div class="img bg-img current" id="tab-1" data-background="assets/img/background/04.jpg"></div>
-                        <div class="img bg-img" id="tab-2" data-background="assets/img/background/05.jpg"></div>
-                        <div class="img bg-img" id="tab-3" data-background="assets/img/background/06.jpg"></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ==================== End services box ==================== -->
-
-
-
-        <!-- ==================== Start numbers ==================== -->
-
-        <section class="numbers section-padding">
-            <div class="container-xxl">
-                <div class="row justify-content-center">
-                    <div class="col-lg-4 col-md-6 d-flex justify-content-center">
-                        <div class="item md-mb50">
-                            <div class="numb valign">
-                                <h4>100%</h4>
-                            </div>
-                            <div class="cont">
-                                <h5 class="fw-200 fz-14 text-u ls1 opacity-7">Satisfied <br> Customers</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 d-flex justify-content-center">
-                        <div class="item md-mb50">
-                            <div class="numb valign">
-                                <h4>88,540</h4>
-                            </div>
-                            <div class="cont">
-                                <h5 class="fw-200 fz-14 text-u ls1 opacity-7">Working<br>hours.</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 d-flex justify-content-center">
-                        <div class="item">
-                            <div class="numb valign">
-                                <h4>1,260</h4>
-                            </div>
-                            <div class="cont">
-                                <h5 class="fw-200 fz-14 text-u ls1 opacity-7">Complete Projects <br> In 60 Country
-                                </h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ==================== End numbers ==================== -->
-
-
-
         <!-- ==================== Start pricing ==================== -->
 
-        <section class="price section-padding sub-bg">
+        <section class="price section-padding">
             <div class="container-xxl">
                 <div class="row">
                     <div class="col-lg-7">
                         <div class="sec-head mb-80">
-                            <h3 class="fw-800">
-                                <span class="stroke">Price</span> Table.
-                            </h3>
+                            <h2>SECRETS OF REALISTIC <span>COMPOSITES.</span></h2>
                         </div>
                     </div>
                 </div>
-                <div class="price-table">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-4 col-md-6">
-                            <div class="item md-mb50">
-                                <div class="type mb-30">
-                                    <h6 class="fz-12 fw-500 text-u ls2">Basic Plan</h6>
-                                </div>
-    
-                                <div class="content">
-                                    <div class="amount mb-10">
-                                        <h3 class="full-width"><span>$</span>9.99</h3>
-                                    </div>
-    
-                                    <div class="text">
-                                        <p class="fz-14">I don't want no chim pot burke tosser cras nice one boot fanny.
-                                        </p>
-                                    </div>
-    
-                                    <div class="offer pt-40 mt-40 bord-thin-top">
-                                        <ul class="rest">
-                                            <li><span class="icon main-color fas fa-check fz-12"></span>
-                                                Marketing
-                                                strategy</li>
-                                            <li><span class="icon main-color fas fa-check fz-12"></span>
-                                                Competitive analysis</li>
-                                            <li><span class="icon main-color fas fa-check fz-12"></span>
-                                                Monthly
-                                                management</li>
-                                            <li class="dis"><span class="icon main-color fas fa-times fz-12"></span>
-                                                Hosted In The Cloud</li>
+                <div class="payment-section">
+                    <div class="payment-full">
+                        <div class="form-payment">
+                            <div class="card ">
+                                <div class="card-header">
+                                    <div class="bg-white shadow-sm pt-4 pl-2 pr-2 pb-2">
+                                        <!-- Credit card form tabs -->
+                                        <ul role="tablist" class="nav bg-light nav-pills rounded nav-fill mb-3">
+                                            <li class="nav-item"> <a data-toggle="pill" href="#credit-card"
+                                                    class="nav-link active flex-title-payment flex-title-payment-card">
+                                                    <p>PAY WITH CARD</p>
+                                                    <p><i class="fas fa-credit-card mr-2"></i></p>
+                                                    <p>الدفع بالبطاقه </p>
+                                                </a> </li>
+                                            <li class="nav-item"> <a data-toggle="pill" href="#paypal"
+                                                    class="nav-link flex-title-payment flex-title-payment-fawry">
+                                                    <p>FAWRY PAY</p>
+                                                    <p>كود فاوري باي</p>
+
+                                                </a>
+                                            </li>
                                         </ul>
-                                    </div>
-                                </div>
-    
-                                <div class="order text-center mt-50">
-                                    <a href="#0">
-                                        <span class="fz-12 fw-500 text-u ls2">Purchase Now</span>
-                                    </a>
+                                    </div> <!-- End -->
+                                    <!-- Credit card form content -->
+                                    <div class="tab-content">
+                                        <!-- credit card info-->
+                                        <div id="credit-card" class="tab-pane fade show active pt-3">
+                                            <form role="form" onsubmit="event.preventDefault()">
+
+                                                <div class="form-group"> <label for="cardNumber">
+                                                        <h6>Card number</h6>
+                                                    </label>
+                                                    <div class="input-group"> <input type="text" name="cardNumber"
+                                                            placeholder="Valid card number" class="form-control "
+                                                            required>
+                                                        <div class="input-group-append"> <span
+                                                                class="input-group-text text-muted"> <i
+                                                                    class="fab fa-cc-visa mx-1"></i> <i
+                                                                    class="fab fa-cc-mastercard mx-1"></i> <i
+                                                                    class="fab fa-cc-amex mx-1"></i> </span> </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm-8">
+                                                        <div class="form-group"> <label><span class="hidden-xs">
+                                                                    <h6>Expiration Date</h6>
+                                                                </span></label>
+                                                            <div class="input-group"> <input type="number"
+                                                                    placeholder="MM" name="" class="form-control"
+                                                                    required> <input type="number" placeholder="YY"
+                                                                    name="" class="form-control" required> </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <div class="form-group mb-4"> <label data-toggle="tooltip"
+                                                                title="Three digit CV code on the back of your card">
+                                                                <h6>CVV <i class="fa fa-question-circle d-inline"></i>
+                                                                </h6>
+                                                            </label> <input type="text" required class="form-control">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="card-footer"> 
+                                                    <div class="buttons-coupon">
+                                                        <a href=""> 
+                                                            <p>SUBSCRIP NOW</p>
+                                                            <p>إشترك الأن</p>
+                                                        </a>
+                                                        <div class="code">
+                                                            <input type="text" placeholder="CODE" name="" id="">
+                                                            <div class="ques-copun">
+                                                                <p>Discount Code</p>
+                                                                <p>هل لديك كوبون خصم</p>
+                                                            </div>
+                                                        </div>
+                                                        <a href="home-creative.html"><p>تفعيل</p> <p>Activate</p></a>
+                                                    </div>
+                                                    
+
+                                            </form>
+                                        </div>
+                                    </div> <!-- End -->
+                                    <!-- Paypal info -->
+                                    <div id="paypal" class="tab-pane fade pt-3">
+                                        <h6 class="pb-2">Select your paypal account type</h6>
+                                        <div class="form-group "> <label class="radio-inline"> <input type="radio"
+                                                    name="optradio" checked> Domestic </label> <label
+                                                class="radio-inline"> <input type="radio" name="optradio"
+                                                    class="ml-5">International </label></div>
+                                        <p> <button type="button" class="btn btn-primary "><i
+                                                    class="fab fa-paypal mr-2"></i> Log into my Paypal</button> </p>
+                                        <p class="text-muted"> Note: After clicking on the button, you will be directed
+                                            to a secure gateway for payment. After completing the payment process, you
+                                            will be redirected back to the website to view details of your order. </p>
+                                    </div> <!-- End -->
+                                    <!-- End -->
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="item active md-mb50">
-                                <div class="type mb-30">
-                                    <h6 class="fz-12 fw-500 text-u ls2">Enterprise</h6>
-                                </div>
-    
-                                <div class="content">
-                                    <div class="amount mb-10">
-                                        <h3 class="full-width"><span>$</span>29.99</h3>
-                                    </div>
-    
-                                    <div class="text">
-                                        <p class="fz-14">I don't want no chim pot burke tosser cras nice one boot fanny.
-                                        </p>
-                                    </div>
-    
-                                    <div class="offer pt-40 mt-40 bord-thin-top">
-                                        <ul class="rest">
-                                            <li><span class="icon main-color fas fa-check fz-12"></span>
-                                                Marketing
-                                                strategy</li>
-                                            <li><span class="icon main-color fas fa-check fz-12"></span>
-                                                Competitive analysis</li>
-                                            <li><span class="icon main-color fas fa-check fz-12"></span>
-                                                Monthly
-                                                management</li>
-                                            <li><span class="icon main-color fas fa-check fz-12"></span>
-                                                Hosted In The Cloud</li>
-                                        </ul>
-                                    </div>
-                                </div>
-    
-                                <div class="order text-center mt-50">
-                                    <a href="#0">
-                                        <span class="fz-12 fw-500 text-u ls2">Purchase Now</span>
-                                    </a>
-                                </div>
+                    </div>
+                    <div class="check-payment">
+                        <p class="tilte-sub">SUBSCRIPTION DETAILS</p>
+                        <p class="list-category"> COURSE TITLE : <span>SECRETS OF REALISTIC COMPOSITES.</span></p> 
+                        <p class="list-category">LECTURER TITLE:  <span>BADR DIAB</span></p> 
+                        <hr>
+                        <p  class="tilte-sub">SUBTOTAL | <span>(EGP 2750.00)</span></p>
+
+
+                        <div class="subscribe-date">
+                            <div class="text-date">
+                                SUBSCRIBER DATA
+                            </div>
+                            <div class="a-edit">
+                                <a href="#">EDIT</a>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="item">
-                                <div class="type mb-30">
-                                    <h6 class="fz-12 fw-500 text-u ls2">Enterprise</h6>
-                                </div>
-    
-                                <div class="content">
-                                    <div class="amount mb-10">
-                                        <h3 class="full-width"><span>$</span>29.99</h3>
-                                    </div>
-    
-                                    <div class="text">
-                                        <p class="fz-14">I don't want no chim pot burke tosser cras nice one boot fanny.
-                                        </p>
-                                    </div>
-    
-                                    <div class="offer pt-40 mt-40 bord-thin-top">
-                                        <ul class="rest">
-                                            <li><span class="icon main-color fas fa-check fz-12"></span>
-                                                Marketing
-                                                strategy</li>
-                                            <li><span class="icon main-color fas fa-check fz-12"></span>
-                                                Competitive analysis</li>
-                                            <li><span class="icon main-color fas fa-check fz-12"></span>
-                                                Monthly
-                                                management</li>
-                                            <li><span class="icon main-color fas fa-check fz-12"></span>
-                                                Hosted In The Cloud</li>
-                                        </ul>
-                                    </div>
-                                </div>
-    
-                                <div class="order text-center mt-50">
-                                    <a href="#0">
-                                        <span class="fz-12 fw-500 text-u ls2">Purchase Now</span>
-                                    </a>
-                                </div>
-                            </div>
+
+                        <div class="det-course">
+                            <p class="name-stu">MOAAZ GALAL MOHAMED</p>
+                            <p>PHONE : <span>01024408060</span></p>
+                            <p>EMAIL : <span>MOAAZ.ART@GMAIL.COM</span></p>
                         </div>
+
                     </div>
                 </div>
             </div>
+            </div>
+
+
+            
         </section>
 
-        <!-- ==================== End pricing ==================== -->
 
-
-
-        <!-- ==================== Start clients ==================== -->
-
-        <div class="clients section-padding bg-dark">
-            <div class="container-xxl o-hidden">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="main-marq">
-                            <div class="slide-har st1">
-
-                                <div class="box">
-                                    <div class="item">
-                                        <div class="img">
-                                            <img src="assets/img/brands/01.png" alt="">
-                                        </div>
-                                        <a href="#0" class="link" data-splitting>www.Cinzel.com</a>
-                                    </div>
-                                    <div class="item">
-                                        <div class="img">
-                                            <img src="assets/img/brands/02.png" alt="">
-                                        </div>
-                                        <a href="#0" class="link" data-splitting>www.Cinzel.com</a>
-                                    </div>
-                                    <div class="item">
-                                        <div class="img">
-                                            <img src="assets/img/brands/03.png" alt="">
-                                        </div>
-                                        <a href="#0" class="link" data-splitting>www.Cinzel.com</a>
-                                    </div>
-                                    <div class="item">
-                                        <div class="img">
-                                            <img src="assets/img/brands/04.png" alt="">
-                                        </div>
-                                        <a href="#0" class="link" data-splitting>www.Cinzel.com</a>
-                                    </div>
-                                    <div class="item">
-                                        <div class="img">
-                                            <img src="assets/img/brands/05.png" alt="">
-                                        </div>
-                                        <a href="#0" class="link" data-splitting>www.Cinzel.com</a>
-                                    </div>
-                                    <div class="item">
-                                        <div class="img">
-                                            <img src="assets/img/brands/06.png" alt="">
-                                        </div>
-                                        <a href="#0" class="link" data-splitting>www.Cinzel.com</a>
-                                    </div>
-                                    <div class="item">
-                                        <div class="img">
-                                            <img src="assets/img/brands/07.png" alt="">
-                                        </div>
-                                        <a href="#0" class="link" data-splitting>www.Cinzel.com</a>
-                                    </div>
-                                    <div class="item">
-                                        <div class="img">
-                                            <img src="assets/img/brands/08.png" alt="">
-                                        </div>
-                                        <a href="#0" class="link" data-splitting>www.Cinzel.com</a>
-                                    </div>
-                                </div>
-                                <div class="box">
-                                    <div class="item">
-                                        <div class="img">
-                                            <img src="assets/img/brands/01.png" alt="">
-                                        </div>
-                                        <a href="#0" class="link" data-splitting>www.Cinzel.com</a>
-                                    </div>
-                                    <div class="item">
-                                        <div class="img">
-                                            <img src="assets/img/brands/02.png" alt="">
-                                        </div>
-                                        <a href="#0" class="link" data-splitting>www.Cinzel.com</a>
-                                    </div>
-                                    <div class="item">
-                                        <div class="img">
-                                            <img src="assets/img/brands/03.png" alt="">
-                                        </div>
-                                        <a href="#0" class="link" data-splitting>www.Cinzel.com</a>
-                                    </div>
-                                    <div class="item">
-                                        <div class="img">
-                                            <img src="assets/img/brands/04.png" alt="">
-                                        </div>
-                                        <a href="#0" class="link" data-splitting>www.Cinzel.com</a>
-                                    </div>
-                                    <div class="item">
-                                        <div class="img">
-                                            <img src="assets/img/brands/05.png" alt="">
-                                        </div>
-                                        <a href="#0" class="link" data-splitting>www.Cinzel.com</a>
-                                    </div>
-                                    <div class="item">
-                                        <div class="img">
-                                            <img src="assets/img/brands/06.png" alt="">
-                                        </div>
-                                        <a href="#0" class="link" data-splitting>www.Cinzel.com</a>
-                                    </div>
-                                    <div class="item">
-                                        <div class="img">
-                                            <img src="assets/img/brands/07.png" alt="">
-                                        </div>
-                                        <a href="#0" class="link" data-splitting>www.Cinzel.com</a>
-                                    </div>
-                                    <div class="item">
-                                        <div class="img">
-                                            <img src="assets/img/brands/08.png" alt="">
-                                        </div>
-                                        <a href="#0" class="link" data-splitting>www.Cinzel.com</a>
-                                    </div>
-                                </div>
-
-                            </div>
+        <div class="sure-accept">
+            <div class="container">
+                <div class="check-payment">
+                    <p class="tilte-sub">SUBSCRIPTION DETAILS</p>
+                    <p class="list-category"> COURSE TITLE : <span>SECRETS OF REALISTIC COMPOSITES.</span></p> 
+                    <p class="list-category">LECTURER TITLE:  <span>BADR DIAB</span></p> 
+                    <hr>
+                    <p  class="tilte-sub">SUBTOTAL | <span>(EGP 2750.00)</span></p>
+    
+    
+                    <div class="subscribe-date">
+                        <div class="text-date">
+                            SUBSCRIBER DATA
+                        </div>
+                        <div class="a-edit">
+                            <a href="#">EDIT</a>
                         </div>
                     </div>
+    
+                    <div class="det-course">
+                        <p class="name-stu">MOAAZ GALAL MOHAMED</p>
+                        <p>PHONE : <span>01024408060</span></p>
+                        <p>EMAIL : <span>MOAAZ.ART@GMAIL.COM</span></p>
+                    </div>
+    
                 </div>
             </div>
         </div>
 
-        <!-- ==================== End clients ==================== -->
-
-
+        <!-- ==================== End pricing ==================== -->
     </main>
 
 
     <!-- ==================== Start Footer ==================== -->
+  <!-- ==================== Start Footer ==================== -->
 
-    <footer class="crv-footer section-padding sub-bg pb-0">
+  <footer class="">
+
+    <div class="sub-footer pb-50 sub-bg2 pt-50 bord-thin-top">
         <div class="container-xxl">
             <div class="row">
-                <div class="col-lg-7">
-                    <div class="cal md-mb50">
-                        <h3 class="fw-800">We develop digital future​.
-                            <span class="mt-10 l-block"><a href="pg-contact2.html"><span class="stroke main-color ls5">Contact us</span>.</a>
-                            </span>
-                        </h3>
-                    </div>
-                </div>
-                <div class="col-lg-5 d-flex align-items-end">
-                    <div class="subs full-width">
-                        <form action="contact.php">
-                            <div class="form-group">
-                                <input type="email" placeholder="Your Email" name="email_subscribe">
-                                <button type="submit" class="sub-title mb-0">Subscribe</button>
+                <div class="col-lg-8">
+                    <div class="footer-flex">
+                        <div class="logo">
+                            <div class="logo-light">
+                                <p class="main-text">CREATO</p>
+                                <p class="sec-text">ACADEMY</p>
                             </div>
-                        </form>
+                            <div class="logo-dark">
+                                <p class="main-text">CREATO</p>
+                                <p class="sec-text">ACADEMY</p>
+                            </div>
+                        </div>
+                        <div class="desc-footer">
+                            Office G345 | Greek Building The GrEEK Campus
+                            American University | Downtown Cairo | Egypt
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="copyrights full-width d-flex justify-content-end">
+                        <p class="fz-13"> © 2022 <span class="underline"><a
+                                    href="https://themeforest.net/user/ThemesCamp"
+                                    target="_blank"> 75Bit</a></span>, Inc </p>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="sub-footer pb-50 pt-50 mt-80 bord-thin-top">
-            <div class="container-xxl">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="horizontal-link fz-13">
-                            <ul class="rest">
-                                <li class="mr-50">
-                                    <div class="logo icon-img-70">
-                                        <a href="landing-preview.html">
-                                            <img src="assets/img/logo-light.png" alt="">
-                                        </a>
-                                    </div>
-                                </li>
-                                <li class="mr-30">
-                                    <a href="pg-mission.html">Privacy policy</a>
-                                </li>
-                                <li class="mr-30">
-                                    <a href="pg-mission.html">Legal notice</a>
-                                </li>
-                                <li>
-                                    <a href="pg-mission.html">Terms of service</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="copyrights full-width d-flex justify-content-end">
-                            <p class="fz-13">© 2022 Cinzel is Proudly Powered by <span class="underline"><a
-                                        href="https://themeforest.net/user/ThemesCamp"
-                                        target="_blank">ThemesCamp</a></span></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+    </div>
+</footer>
+
+<!-- ==================== End Footer ==================== -->
+
+
+
 
     <!-- ==================== End Footer ==================== -->
 
@@ -861,7 +676,11 @@
 
 
 
-
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
 
 
 
@@ -871,7 +690,8 @@
 
     <!-- plugins -->
     <script src="assets/js/plugins.js"></script>
-
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- custom scripts -->
     <script src="assets/js/scripts.js"></script>
 

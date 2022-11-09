@@ -31,8 +31,148 @@
 
 </head>
 
+<style>
+   
+
+    .logo {
+        position: relative;
+    }
+
+    .logo p.main-text {
+        font-size: 24px;
+        line-height: 0;
+        margin-bottom: 4px;
+        font-weight: 700;
+    }
+
+    .logo p.sec-text {
+        margin-left: 10px;
+    }
+
+    .logo p span {
+        position: absolute;
+        right: 10px;
+        top: -5px;
+        font-size: 12px;
+    }
+
+    .bg-img {
+        position: relative;
+    }
+
+    .bg-img::after {
+        position: absolute;
+        content: "";
+        width: 1000px;
+        height: 5px;
+        bottom: 0;
+        background: linear-gradient(to right, #720efa, #3490fc, #ff9509, #fd011a, #f62d81);
+    }
+
+    .swiper-slide {
+        position: relative;
+    }
+
+    .image {
+        position: relative;
+        width: 400px;
+    }
+
+    .image__img {
+        display: block;
+        width: 100%;
+    }
+
+    .image__overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.2);
+        color: #ffffff;
+        font-family: 'Quicksand', sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.25s;
+    }
+
+    .image__overlay--blur {
+        backdrop-filter: blur(5px);
+    }
+
+    .image__overlay--primary {
+        background: rgba(0, 0, 0, 0.589);
+    }
+
+    .image__overlay>* {
+        transform: translateY(20px);
+        transition: transform 0.25s;
+    }
+
+    .image__overlay:hover {
+        opacity: 1;
+    }
+
+    .image__overlay:hover>* {
+        transform: translateY(0);
+    }
+
+    .image__title {
+        font-size: 2em;
+        font-weight: bold;
+    }
+
+    .image__description {
+        font-size: 1.25em;
+        margin-top: 0.25em;
+    }
+
+    .line-text {
+        position: absolute;
+        top: 20%;
+        left: 3em;
+        transform: rotate(90deg);
+        transform-origin: 0 0;
+        z-index: 99;
+    }
+
+    .line-text a {
+        font-weight: 300;
+        font-size: 1rem;
+    }
+
+    .line-text a::after {
+        content: '';
+        display: inline-block;
+        width: 17rem;
+        margin-left: 13px;
+        margin-bottom: 3px;
+        height: 1px;
+        background: #fff;
+    }
+    body.light .line-text a::after{
+        background: #000;
+    }
+
+    .line-text a span {
+        transform: rotate(180deg);
+    }
+    </style>
+
 <body>
 
+
+    <div class="parent-line">
+        <div class="line-text">
+            <a href="#">
+                <span>MORE EMOTIONS</span>
+            </a>
+        </div>
+    </div>
 
     <!-- ==================== Start progress-scroll-button ==================== -->
 
@@ -55,147 +195,58 @@
 
 
 
-    <!-- ==================== Start Navbar ==================== -->
-
-    <nav class="navbar navbar-expand-lg light">
-        <div class="container-xxl">
-            <a class="navbar-brand" href="#0">
+    <nav class="navbar navbar-expand-lg nochan">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
                 <div class="logo">
                     <div class="logo-light">
-                        <img src="assets/img/logo-light.png" alt="">
+                        <p class="main-text">CREATO<span>TM</span></p>
+                        <p class="sec-text">ACADEMY</p>
                     </div>
                     <div class="logo-dark">
-                        <img src="assets/img/logo-dark.png" alt="">
+                        <p class="main-text">CREATO<span>TM</span></p>
+                        <p class="sec-text">ACADEMY</p>
                     </div>
                 </div>
             </a>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
                             Home
                         </a>
-                        <ul class="dropdown-menu">
-                            <li class="dropdown-item">
-                                <a href="#0">Showcase <i class="fas fa-angle-right icon-arrow"></i></a>
-                                <ul class="dropdown-side">
-                                    <li><a class="dropdown-item" href="showcase-full.html">Fullscreen Slider</a></li>
-                                    <li><a class="dropdown-item" href="showcase-interactive-center.html">Interactive Links</a></li>
-                                    <li><a class="dropdown-item" href="showcase-interactive-center-horizontal.html">Interactive Links 2</a></li>
-                                    <li><a class="dropdown-item" href="showcase-parallax.html">Parallax Slider</a></li>
-                                    <li><a class="dropdown-item" href="index.html">Columns Horizontal</a></li>
-                                </ul>
-                            </li>
-                            <li><a class="dropdown-item" href="home-main.html">Home Main</a></li>
-                            <li><a class="dropdown-item" href="home-creative.html">Creative Studio</a></li>
-                            <li><a class="dropdown-item" href="home-modern.html">Modern Agency</a></li>
-                            <li><a class="dropdown-item" href="home-business.html">Business Corporate</a></li>
-                            <li><a class="dropdown-item" href="home-arch.html">Architecture</a></li>
-                            <li><a class="dropdown-item" href="home-freelancer.html">Freelancer</a></li>
-                            <li><a class="dropdown-item" href="home-agency.html">Digital Agency</a></li>
-                            <li><a class="dropdown-item" href="home-fullpage-scroll.html">One Page Scrolling</a></li>
-                            <li><a class="dropdown-item" href="home-portfolio-grid.html">Creative Agency</a></li>
-                            <li><a class="dropdown-item" href="home-portfolio-minimal.html">Minimal Portfolio</a></li>
-                        </ul>
                     </li>
 
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Pages
+                    <li class="nav-item">
+                        <a class="nav-link" href="pg-about-us.html">
+                            About us
                         </a>
-                        <ul class="dropdown-menu">
-                            <li class="dropdown-item">
-                                <a href="#0">About <i class="fas fa-angle-right icon-arrow"></i></a>
-                                <ul class="dropdown-side">
-                                    <li><a class="dropdown-item" href="pg-about-us.html">About Us 1</a></li>
-                                    <li><a class="dropdown-item" href="pg-about-us2.html">About Us 2</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown-item">
-                                <a href="#0">Services <i class="fas fa-angle-right icon-arrow"></i></a>
-                                <ul class="dropdown-side">
-                                    <li><a class="dropdown-item" href="pg-services.html">Services 1</a>
-                                    </li>
-                                    <li><a class="dropdown-item" href="pg-services2.html">Services 2</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li><a class="dropdown-item" href="pg-our-team.html">Our Team</a></li>
-                            <li><a class="dropdown-item" href="pg-contact.html">Get In Touch</a></li>
-                            <li><a class="dropdown-item" href="pg-mission.html">Our Mission</a></li>
-                            <li><a class="dropdown-item" href="404.html">Error 404</a></li>
-                            <li><a class="dropdown-item" href="coming-soon.html">Coming Soon</a></li>
-                        </ul>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
-                            Portfolio
+                            Courses
                         </a>
                         <ul class="dropdown-menu">
-                            <li class="dropdown-item">
-                                <a href="#0">Grid <i class="fas fa-angle-right icon-arrow"></i></a>
-                                <ul class="dropdown-side">
-                                    <li><a class="dropdown-item" href="portfolio-grid-2col.html">Grid 2 Columns</a></li>
-                                    <li><a class="dropdown-item" href="portfolio-grid-3col.html">Grid 3 Columns</a></li>
-                                    <li><a class="dropdown-item" href="portfolio-grid-4col.html">Grid 4 Columns</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown-item">
-                                <a href="#0">Masonry <i class="fas fa-angle-right icon-arrow"></i></a>
-                                <ul class="dropdown-side">
-                                    <li><a class="dropdown-item" href="portfolio-masonry-classic.html">Masonry
-                                            Classic</a></li>
-                                    <li><a class="dropdown-item" href="portfolio-masonry-shadow.html">Masonry Shadow</a>
-                                    </li>
-                                    <li><a class="dropdown-item" href="portfolio-masonry-overlay.html">Masonry
-                                            Overlay</a></li>
-                                    <li><a class="dropdown-item" href="portfolio-masonry-big-space.html">Masonry Wide
-                                            Space</a></li>
-                                    <li><a class="dropdown-item" href="portfolio-masonry-caption-cursor.html">Masonry
-                                            Cursor Caption</a></li>
-                                </ul>
-                            </li>
-                            <li><a class="dropdown-item" href="portfolio-layout-hover-effect.html">Hover Effect</a></li>
-                            <li><a class="dropdown-item" href="portfolio-layout-metro.html">Layout Metro</a></li>
-                            <li><a class="dropdown-item" href="portfolio-layout-packery.html">Layout Packery</a></li>
-                            <li><a class="dropdown-item" href="project-details.html">Project Details</a></li>
+                            <li><a class="dropdown-item" href="pg-our-team.html">How To Create</a></li>
+                            <li><a class="dropdown-item" href="portfolio-layout-metro.html">Layout
+                                    Metro</a></li>
+                            <li><a class="dropdown-item" href="portfolio-layout-packery.html">Layout
+                                    Packery</a></li>
+                            <li><a class="dropdown-item" href="project-details.html">Project
+                                    Details</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Blogs
+                        <a class="nav-link" href="home-modern.html">
+                            Services
                         </a>
-                        <ul class="dropdown-menu show-left">
-                            <li class="dropdown-item">
-                                <a href="#0">Blog Grid <i class="fas fa-angle-right icon-arrow"></i></a>
-                                <ul class="dropdown-side">
-                                    <li><a class="dropdown-item" href="blog-grid-2col.html">Grid 2 Columns + Sidebar</a>
-                                    </li>
-                                    <li><a class="dropdown-item" href="blog-grid-3col.html">Grid 3 Columns</a></li>
-                                    <li><a class="dropdown-item" href="blog-grid-4col.html">Grid 4 Columns</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown-item">
-                                <a href="#0">Blog Masonry <i class="fas fa-angle-right icon-arrow"></i></a>
-                                <ul class="dropdown-side">
-                                    <li><a class="dropdown-item" href="blog-masonry-2col.html">Masonry 2 Columns +
-                                            Sidebar</a>
-                                    </li>
-                                    <li><a class="dropdown-item" href="blog-masonry-3col.html">Masonry 3 Columns</a>
-                                    </li>
-                                    <li><a class="dropdown-item" href="blog-masonry-4col.html">Masonry 4 Columns</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li><a class="dropdown-item" href="blog-classic.html">Blog Calssic</a></li>
-                            <li><a class="dropdown-item" href="blog-list.html">Blog List</a></li>
-                            <li><a class="dropdown-item" href="blog-post.html">Post Details</a></li>
-                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pg-contact2.html">
+                            Student Work
+                        </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="pg-contact2.html">
@@ -215,7 +266,8 @@
                     </div>
                     <div class="dark-mode-icon">
                         <button type="button" class="theme-icon">
-                            <i aria-hidden="true" class="pe-7s-moon moon" title="Toggle between dark and light mode"></i>
+                            <i aria-hidden="true" class="pe-7s-moon moon"
+                                title="Toggle between dark and light mode"></i>
                             <i aria-hidden="true" class="pe-7s-sun sun" title="Toggle between dark and light mode"></i>
                         </button>
                     </div>
@@ -229,42 +281,9 @@
             </button>
         </div>
     </nav>
-
-    <!-- ==================== End Navbar ==================== -->
-
-
     <main>
 
         <div class="vline tline"></div>
-
-
-        <!-- ==================== Start Slider ==================== -->
-
-        <header class="pg-header style2 bg-img parallaxie valign" data-background="assets/img/slider/3.jpg"
-            data-overlay-dark="6">
-            <div class="container-xxl ontop">
-                <div class="row">
-                    <div class="col-lg-7 col-md-10">
-                        <div class="cont mb-80">
-                            <h6 class="sub-title"><a href="home-main.html">Home</a> <span class="ml-20 mr-20">/</span>
-                                <span class="main-color">Contact</span>
-                            </h6>
-                            <h1 class="fw-800 fz-70">Contact Us .</h1>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="curve">
-                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" viewBox="0 0 100 100"
-                    preserveAspectRatio="none">
-                    <path d="M0 100 0 0 C15 120 35 120 100 0 L 100 100 Z" fill="#191b1d"></path>
-                </svg>
-            </div>
-        </header>
-
-        <!-- ==================== End Slider ==================== -->
-
-
 
         <!-- ==================== Start Contact ==================== -->
 
@@ -324,7 +343,7 @@
                             </div>
 
                             <div class="item pb-30 bord-thin-bottom">
-                                <h6>295 Witting Streets Suite 666, <br> Melbourne, Australia</h6>
+                                <h6>Office G345 | Greek Building The GrEEK Campus American University |  <br> Downtown Cairo  Egypt</h6>
                             </div>
 
                             <div class="social fz-13 mt-50">
@@ -333,9 +352,6 @@
                                 </a>
                                 <a href="#0" class="icon">
                                     <i class="fab fa-twitter"></i>
-                                </a>
-                                <a href="#0" class="icon">
-                                    <i class="fab fa-pinterest"></i>
                                 </a>
                                 <a href="#0" class="icon">
                                     <i class="fab fa-behance"></i>
@@ -366,122 +382,46 @@
     </main>
 
 
-    <!-- ==================== Start Footer ==================== -->
+  <!-- ==================== Start Footer ==================== -->
 
-    <footer class="main-footer">
+  <footer class="">
 
-        <div class="container-xxl pt-80 pb-80">
+    <div class="sub-footer pb-50 sub-bg2 pt-50 bord-thin-top">
+        <div class="container-xxl">
             <div class="row">
-                <div class="col-lg-2 col-md-6">
-                    <div class="clumn md-mb50">
+                <div class="col-lg-8">
+                    <div class="footer-flex">
                         <div class="logo">
-                            <a href="#0">
-                                <div class="logo-light">
-                                    <img src="assets/img/logo-light.png" alt="">
-                                </div>
-                                <div class="logo-dark">
-                                    <img src="assets/img/logo-dark.png" alt="">
-                                </div>
-                            </a>
+                            <div class="logo-light">
+                                <p class="main-text">CREATO</p>
+                                <p class="sec-text">ACADEMY</p>
+                            </div>
+                            <div class="logo-dark">
+                                <p class="main-text">CREATO</p>
+                                <p class="sec-text">ACADEMY</p>
+                            </div>
+                        </div>
+                        <div class="desc-footer">
+                            Office G345 | Greek Building The GrEEK Campus
+                            American University | Downtown Cairo | Egypt
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-6">
-                    <div class="clumn md-mb50">
-                        <h5 class="title fw-600 fz-20 mb-30">About Us</h5>
-                        <ul class="cmp-links">
-                            <li class="mb-10">
-                                <a href="pg-about-us2.html">Company</a>
-                            </li>
-                            <li class="mb-10">
-                                <a href="pg-our-team.html">Team</a>
-                            </li>
-                            <li class="mb-10">
-                                <a href="pg-services2.html">Services</a>
-                            </li>
-                            <li class="mb-10">
-                                <a href="portfolio-grid-4col.html">Products</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="clumn sm-mb50">
-                        <h5 class="title fw-600 fz-20 mb-30">Office</h5>
-                        <ul class="address">
-                            <li class="adrs mb-15">Germany — 785 15h Street, Office 478 Berlin, De 81566</li>
-                            <li class="eml underline mb-15">
-                                <a href="mailto:example@website.com">Info-Support@Gmail.com</a>
-                            </li>
-                            <li class="tel">
-                                <h6>+1 840 841 25 69</h6>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="clumn">
-                        <h5 class="title fw-600 fz-20 mb-30">Recent Posts</h5>
-                        <ul class="rc-post">
-                            <li>
-                                <a href="blog-list.html" class="flex mb-30">
-                                    <div class="img">
-                                        <img src="assets/img/blog/c3.jpg" alt="">
-                                    </div>
-                                    <div class="cont">
-                                        <h6 class="fz-16 line-height-28">How to check the website before
-                                            releasing it?</h6>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="blog-list.html" class="flex">
-                                    <div class="img">
-                                        <img src="assets/img/blog/c1.jpg" alt="">
-                                    </div>
-                                    <div class="cont">
-                                        <h6 class="fz-16 line-height-28">How to check the website before
-                                            releasing it?</h6>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
+                <div class="col-lg-4">
+                    <div class="copyrights full-width d-flex justify-content-end">
+                        <p class="fz-13"> © 2022 <span class="underline"><a
+                                    href="https://themeforest.net/user/ThemesCamp"
+                                    target="_blank"> 75Bit</a></span>, Inc </p>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+</footer>
 
-        <div class="sub-footer pb-50 pt-50 bord-thin-top">
-            <div class="container-xxl">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="horizontal-link fz-13">
-                            <ul class="rest">
-                                <li class="mr-30">
-                                    <a href="pg-mission.html">Privacy policy</a>
-                                </li>
-                                <li class="mr-30">
-                                    <a href="pg-mission.html">Legal notice</a>
-                                </li>
-                                <li>
-                                    <a href="pg-mission.html">Terms of service</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="copyrights d-flex justify-content-end">
-                            <p class="fz-13">© 2022 Cinzel is Proudly Powered by <span class="underline"><a
-                                        href="https://themeforest.net/user/ThemesCamp"
-                                        target="_blank">ThemesCamp</a></span></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+<!-- ==================== End Footer ==================== -->
 
-    <!-- ==================== End Footer ==================== -->
+
 
 
 
