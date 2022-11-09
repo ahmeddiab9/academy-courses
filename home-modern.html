@@ -33,18 +33,57 @@
 
 </head>
 
-<body class="modern-home skin-gray">
+<style>
+    .line-text {
+        position: absolute;
+        top: 20%;
+        left: 3em;
+        transform: rotate(90deg);
+        transform-origin: 0 0;
+        z-index: 99;
+    }
+
+    .line-text a {
+        font-weight: 300;
+        font-size: 1rem;
+    }
+
+    .line-text a::after {
+        content: '';
+        display: inline-block;
+        width: 17rem;
+        margin-left: 13px;
+        margin-bottom: 3px;
+        height: 1px;
+        background: white;
+    }
+
+    body.light .line-text a::after {
+        background: #000;
+    }
+
+    .line-text a span {
+        transform: rotate(180deg);
+    }
+    .footer-flex{
+        display: flex;
+        justify-content: space-between;
+    }
+    .desc-footer{
+        width: 73%;
+    }
+</style>
+
+<body class=" skin-gray">
 
 
-    <!-- ==================== Start progress-scroll-button ==================== -->
-
-    <div class="progress-wrap cursor-pointer">
-        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
-            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
-        </svg>
+    <div class="parent-line">
+        <div class="line-text">
+            <a href="#">
+                <span>MORE EMOTIONS</span>
+            </a>
+        </div>
     </div>
-
-    <!-- ==================== End progress-scroll-button ==================== -->
 
 
 
@@ -93,11 +132,10 @@
                             Courses
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="pg-our-team.html">How To create From Scratch</a></li>
-                            <li><a class="dropdown-item" href="portfolio-layout-hover-effect.html">Hover Effect</a></li>
-                            <li><a class="dropdown-item" href="portfolio-layout-metro.html">Layout Metro</a></li>
-                            <li><a class="dropdown-item" href="portfolio-layout-packery.html">Layout Packery</a></li>
-                            <li><a class="dropdown-item" href="project-details.html">Project Details</a></li>
+                            <li><a class="dropdown-item" href="pg-our-team.html">HOW TO CREATE MOCKUPS FROM SCRATCH</a></li>
+                            <li><a class="dropdown-item" href="pg-our-team.html">SECRETS OF REALASTICS COMPOSITES</a></li>
+                            <li><a class="dropdown-item" href="pg-our-team.html">3D ART DIRECTIONS GUIDES</a></li>
+                            <li><a class="dropdown-item" href="pg-our-team.html">HOW TO BUILD A STRONG BRAND</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
@@ -122,8 +160,8 @@
                         <ul class="rest">
                             <li>
                                 <a href="#0"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#0"><i class="fab fa-twitter"></i></a>
-                                <a href="#0"><i class="fab fa-dribbble"></i></a>
+                                <a href="#0"><i class="fab fa-instagram"></i></i></a>
+                                <a href="#0"><i class="fab fa-behance"></i></a>
                             </li>
                         </ul>
                     </div>
@@ -153,27 +191,30 @@
         <div class="vline tline"></div>
         <!-- ==================== Start Services ==================== -->
 
-        <section class="serv-box section-padding bg-dark">
-            <div class="container-xxl">
+        <section class="serv-box section-padding ">
+            <div class="container">
                 <div class="row">
                     <div class="col-lg-4">
-                        <div class="serv-item bg-dark md-mb50">
-                            <span class="icon fz-50 mb-40 pe-7s-paint-bucket"></span>
-                            <h5 class="mb-30 pb-30 bord-thin-bottom">Brand Strategy & <br> Art Direction</h5>
+                        <div class="serv-item  md-mb50">
+                            <span class="icon fz-50 mb-40 pe-7s-hourglass"></span>
+                            <h5 class="mb-30 pb-30 bord-thin-bottom">OFFLINE
+                                COURSES</h5>
                             <p>Creating a higher spacing and how people move through a unique.</p>
                         </div>
                     </div>
                     <div class="col-lg-4">
-                        <div class="serv-item bg-dark md-mb50">
+                        <div class="serv-item  md-mb50">
                             <span class="icon fz-50 mb-40 pe-7s-mouse"></span>
-                            <h5 class="mb-30 pb-30 bord-thin-bottom">UX/UI Design & <br> Website/App Design</h5>
+                            <h5 class="mb-30 pb-30 bord-thin-bottom">TRAINING
+                                AGENCIES</h5>
                             <p>Creating a higher spacing and how people move through a unique.</p>
                         </div>
                     </div>
                     <div class="col-lg-4">
-                        <div class="serv-item bg-dark">
+                        <div class="serv-item ">
                             <span class="icon fz-50 mb-40 pe-7s-bell"></span>
-                            <h5 class="mb-30 pb-30 bord-thin-bottom">Typography & <br> Video Production</h5>
+                            <h5 class="mb-30 pb-30 bord-thin-bottom">HEARING
+                                SOLUTION</h5>
                             <p>Creating a higher spacing and how people move through a unique.</p>
                         </div>
                     </div>
@@ -186,113 +227,41 @@
 
     <!-- ==================== Start Footer ==================== -->
 
-    <footer class="main-footer sub-bg">
+    <footer class="">
 
-        <div class="container-xxl pt-80 pb-80">
-            <div class="row">
-                <div class="col-lg-2 col-md-6">
-                    <div class="clumn md-mb50">
-                        <div class="logo">
-                            <a href="#0">
-                                <img src="assets/img/logo-light.png" alt="">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-6">
-                    <div class="clumn md-mb50">
-                        <h5 class="title fw-600 fz-20 mb-30">About Us</h5>
-                        <ul class="cmp-links">
-                            <li class="mb-10">
-                                <a href="pg-about-us2.html">Company</a>
-                            </li>
-                            <li class="mb-10">
-                                <a href="pg-our-team.html">Team</a>
-                            </li>
-                            <li class="mb-10">
-                                <a href="pg-services2.html">Services</a>
-                            </li>
-                            <li class="mb-10">
-                                <a href="portfolio-grid-4col.html">Products</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="clumn sm-mb50">
-                        <h5 class="title fw-600 fz-20 mb-30">Office</h5>
-                        <ul class="address">
-                            <li class="adrs mb-15">Germany — 785 15h Street, Office 478 Berlin, De 81566</li>
-                            <li class="eml underline mb-15">
-                                <a href="mailto:example@website.com">Info-Support@Gmail.com</a>
-                            </li>
-                            <li class="tel">
-                                <h6>+1 840 841 25 69</h6>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="clumn">
-                        <h5 class="title fw-600 fz-20 mb-30">Recent Posts</h5>
-                        <ul class="rc-post">
-                            <li>
-                                <a href="blog-list.html" class="flex mb-30">
-                                    <div class="img">
-                                        <img src="assets/img/blog/c3.jpg" alt="">
-                                    </div>
-                                    <div class="cont">
-                                        <h6 class="fz-16 line-height-28">How to check the website before
-                                            releasing it?</h6>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="blog-list.html" class="flex">
-                                    <div class="img">
-                                        <img src="assets/img/blog/c1.jpg" alt="">
-                                    </div>
-                                    <div class="cont">
-                                        <h6 class="fz-16 line-height-28">How to check the website before
-                                            releasing it?</h6>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="sub-footer pb-50 pt-50 bord-thin-top">
-            <div class="container-xxl">
+        <div class="sub-footer pb-50 sub-bg2 pt-50 bord-thin-top">
+            <div class="container">
                 <div class="row">
-                    <div class="col-lg-6">
-                        <div class="horizontal-link fz-13">
-                            <ul class="rest">
-                                <li class="mr-30">
-                                    <a href="pg-mission.html">Privacy policy</a>
-                                </li>
-                                <li class="mr-30">
-                                    <a href="pg-mission.html">Legal notice</a>
-                                </li>
-                                <li>
-                                    <a href="pg-mission.html">Terms of service</a>
-                                </li>
-                            </ul>
+                    <div class="col-lg-8">
+                        <div class="footer-flex">
+                            <div class="logo">
+                                <div class="logo-light">
+                                    <p class="main-text">CREATO</p>
+                                    <p class="sec-text">ACADEMY</p>
+                                </div>
+                                <div class="logo-dark">
+                                    <p class="main-text">CREATO</p>
+                                    <p class="sec-text">ACADEMY</p>
+                                </div>
+                            </div>
+                            <div class="desc-footer">
+                                Office G345 | Greek Building The GrEEK Campus
+                                American University | Downtown Cairo | Egypt
+                            </div>
                         </div>
                     </div>
-                    <div class="col-lg-6">
-                        <div class="copyrights d-flex justify-content-end">
-                            <p class="fz-13">© 2022 Cinzel is Proudly Powered by <span class="underline"><a
+                    <div class="col-lg-4">
+                        <div class="copyrights full-width d-flex justify-content-end">
+                            <p class="fz-13"> © 2022 <span class="underline"><a
                                         href="https://themeforest.net/user/ThemesCamp"
-                                        target="_blank">ThemesCamp</a></span></p>
+                                        target="_blank"> 75Bit</a></span>, Inc </p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
+
 
     <!-- ==================== End Footer ==================== -->
 
